@@ -135,20 +135,19 @@ def get_expenses(exp_type, how_many=1):
         elif item_name == "xxx":
             break
 
-        # Get variable expenses item amount <enter> defaults to number of
-        # products being made.
+        # Get variable expenses item amount <enter> defaults to number of products being made.  
         if exp_type == "variable":
 
             amount = num_check(f"How many <enter for {how_many}>: ",
                                "integer", "")
 
-            # Allow users to push <enter> to default to number of items being made
+            # Allow users to push enter to default to number of items being made
             if amount == "":
                 amount = how_many
 
             how_much_question = "Price for one? $"
 
-        # Get price for item (question customised depending on expense type).
+        # Get price for item (
         price_for_one = num_check(how_much_question, "float")
 
         all_items.append(item_name)
@@ -190,7 +189,7 @@ def currency(x):
 
 # intialise variables...
 
-# assume we have no fixed expenses for now
+# assume we have no fixed expenses
 fixed_subtotal = 0
 fixed_panda_string = ""
 
@@ -227,7 +226,7 @@ if has_fixed == "yes":
     fixed_subtotal = fixed_expenses[1]
 
     # If the user has not entered any fixed expenses,
-    # # Set empty panda to "" so that it does not display!
+    #  Set empty panda to "" so that it does not display!
     if fixed_subtotal == 0:
         has_fixed = "no"
         fixed_panda_string = ""
@@ -236,7 +235,7 @@ total_expenses = variable_subtotal + fixed_subtotal
 total_expenses_string = f"Total Expenses: ${total_expenses:.2f}"
 
 
-# Get profit Goal here.
+# Get profit Goal here
 
 # strings / output area
 
